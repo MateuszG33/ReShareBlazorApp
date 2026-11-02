@@ -1,0 +1,158 @@
+/* Główny pas navbara z granatowym gradientem */
+.navbar.bg-1 {
+    background: linear-gradient(135deg, #0a0f1d 0%, #1e293b 100%) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+    box-shadow: 0 10px 30px -10px rgba(10, 15, 29, 0.5);
+    padding: 0.6rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Wymuszenie jednego poziomego pasa dla całego kontenera */
+.navbar .container-fluid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100%;
+}
+
+/* Główna grupa elementów - absolutnie w jednej linii */
+.navbar-left-elements {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+/* Logo */
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.25rem;
+    background: linear-gradient(135deg, #ffffff 0%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.75px;
+    white-space: nowrap;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* Wymuszenie poziomego układu dla listy nawigacji */
+.navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 0.5rem;
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+    list-style: none;
+    flex-shrink: 0;
+}
+
+    .navbar-nav .nav-item {
+        display: flex !important;
+        white-space: nowrap;
+    }
+
+    /* Styl "ramki z gradientem" dla WSZYSTKICH przycisków w menu (Home, Odkrywaj, Wiadomości, Profil, Zaloguj się) */
+    .navbar-nav .nav-link {
+        color: #94a3b8 !important;
+        font-weight: 500;
+        font-size: 0.9rem;
+        padding: 0.45rem 1rem !important;
+        border-radius: 10px;
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        transition: all 0.25s ease;
+        white-space: nowrap;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffffff !important;
+            border-color: #38bdf8;
+            background-color: rgba(56, 189, 248, 0.1);
+        }
+
+        /* Aktywny przycisk (np. Home) */
+        .navbar-nav .nav-link.active {
+            color: #ffffff !important;
+            background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+            border-color: #38bdf8;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+        }
+
+/* Formularz wyszukiwania wyrzucony automatycznie w prawą stronę */
+.navbar form[role="search"] {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 0.5rem;
+    margin-left: auto !important;
+    flex-shrink: 0;
+}
+
+/* Pole wyszukiwania w pasującej ramce */
+.form-control {
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 10px;
+    padding: 0.5rem 1rem 0.5rem 2.3rem;
+    font-size: 0.85rem;
+    color: #ffffff;
+    transition: all 0.25s ease;
+    background-color: rgba(15, 23, 42, 0.6);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8' width='16' height='16'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 0.75rem center;
+    width: 170px;
+}
+
+    .form-control::placeholder {
+        color: #64748b;
+    }
+
+    .form-control:focus {
+        border-color: #38bdf8;
+        box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+        background-color: rgba(15, 23, 42, 0.9);
+        outline: none;
+    }
+
+/* Przycisk wyszukiwania z szafirowym gradientem */
+.btn-solid.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+    color: #ffffff;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 10px;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    text-decoration: none;
+}
+
+    .btn-solid.btn-icon:hover {
+        filter: brightness(1.15);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+    }
+
+    .btn-solid.btn-icon svg {
+        stroke: currentColor;
+        fill: none;
+    }
